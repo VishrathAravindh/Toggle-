@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<style>
+body{
+  background-image:url("/Project/bg image.jpg")
+}
+  .g{
+    display:flex;
+align-items:center;
+    justify-content:center;
+    
+  }
+  .button{
+    height:100px;width:200px;border-radius:200px;background-image:url("/Project/sunrise.jpg");
+  }
+  .button::before{
+    position: absolute ;
+    content:'';
+    height:80px;
+    width:80px;
+    background-color:white;
+    border-radius:50%;
+    margin:5px;background-image:url("/Project/sun.jpg")
+
+  }
+  input:checked +.button{
+    background-image:url("/Project/night.jpg");
+  }
+    input:checked +.button::before{
+      transform:translateX(100px);
+      transition:0.5s;    background-image:url("/Project/moon.jpg")
+     
+    }
+    
+    /*This HTML and CSS code creates a simple webpage with a toggle button. Let's break it down:
+
+1. **HTML Structure:**
+   - `<!DOCTYPE html>`: Declaration of the HTML version.
+   - `<html>`: The root element of the HTML document.
+   - `<head>`: Contains metadata like character set and viewport settings.
+   - `<meta charset="UTF-8">`: Sets the character set to UTF-8.
+   - `<meta name="viewport" content="width=device-width, initial-scale=1">`: Configures the viewport for better responsiveness.
+   - `<title></title>`: The title of the webpage (currently empty).
+   - `<body>`: The main content of the webpage.
+
+2. **CSS Styling:**
+   - `body`: Sets the background image of the body to "/Project/bg image.jpg".
+   - `.g`: Styles a container with flex properties to center its content both vertically and horizontally.
+   - `.button`: Styles a circular button with a background image "/Project/sunrise.jpg".
+   - `.button::before`: Creates a pseudo-element before the button, representing the moon. It starts as a white circle and moves to the right on checkbox activation, revealing a moon image.
+   - `input:checked +.button`: Changes the background image of the button to "/Project/night.jpg" when the checkbox is checked.
+   - `input:checked +.button::before`: Transforms the pseudo-element to the right and changes its background image to "/Project/moon.jpg" with a smooth transition.
+
+3. **Checkbox Input:**
+   - `<input type="checkbox" value="checkbox" id="check">`: Creates a checkbox input with the id "check".
+   - `<label for="check" class="button"></label>`: Associates the label with the checkbox, using the label as the button. The label is styled as a button.
+
+4. **Functionality:**
+   - The checkbox serves as a toggle switch. When checked, it changes the background image of the button to represent nighttime, and the moon pseudo-element transitions to the right.
+
+Overall, this code combines HTML and CSS to create a visually appealing toggle button that represents a day-night switch./*
+</style>
+<div class="g"><input type="checkbox" value="checkbox" id="check">
+<label for="check" class="button"></label></div>
+</body>
+
+</html>
